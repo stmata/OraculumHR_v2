@@ -1,0 +1,242 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  color: #252525;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-color);
+  z-index: 1000;
+}
+
+.titleBtn,
+.logoBtn {
+  background-color: transparent;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoImg {
+  height: 36px;
+  object-fit: contain;
+  margin: 2rem;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #252525;
+}
+
+.hr {
+  color: #E7433C;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: #777;
+  font-weight: 500;
+}
+
+
+.titleDark {
+  color: #f0f0f0;
+}
+
+.hrDark {
+  color: #00B3E6;
+}
+
+.subtitleDark {
+  color: #ccc;
+}
+
+.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.langToggle {
+  all: unset;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  user-select: none;
+  color: inherit;
+}
+
+.activeLang {
+  font-weight: 900;
+}
+
+.modeToggle {
+  all: unset;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding-right: 3rem;
+  padding-left: 4rem;
+}
+
+.desktopContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopContent {
+    display: none;
+  }
+
+  .logoImg {
+    margin-bottom: 0px;
+  }
+
+  .burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 50%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+    z-index: 1100;
+    background: rgba(186, 86, 86, 0.7);
+    color: #fff;
+    padding: 0;
+    line-height: 1;
+  }
+
+
+  .mobileMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    z-index: 1001;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 10%;
+  }
+
+  .dark {
+    background-color: #252525;
+    color: #f0f0f0;
+  }
+
+  .langToggle {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    user-select: none;
+    color: inherit;
+    width: 100%;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+  }
+
+}
+
+
+.langBox {
+  all: unset;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.langBox:hover {
+  background-color: #e0e0e0;
+}
+
+.dark .langBox {
+  background-color: #333;
+  color: #f0f0f0;
+  border-color: #666;
+}
+
+.dark .langBox:hover {
+  background-color: #444;
+}
+
+.logoutBtn {
+  background: transparent;
+  border: 2px solid #E7433C;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #E7433C;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-left: 16px;
+}
+
+.logoutBtn:hover {
+  background: #cf3a34;
+  color: white;
+  border-color: #cf3a34;
+}
+.logoutBtn:active {
+  transform: scale(0.96);
+  opacity: 0.9;
+}

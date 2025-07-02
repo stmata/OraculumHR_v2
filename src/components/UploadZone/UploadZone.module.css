@@ -1,0 +1,116 @@
+.uploadZone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    text-align: center;
+    height: 100%;
+}
+
+.dark {
+    background-color: #1e1e1e;
+}
+
+.whiteSpaceText {
+    white-space: pre-line;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.emoji {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    white-space: pre-line;
+}
+
+.uploadButton,
+.toggleListButton {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-color: #E7433C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.uploadButton:hover,
+.toggleListButton:hover {
+    background-color: #bf2d28;
+}
+
+.darkButton {
+    background-color: #00B3E6 !important;
+}
+
+.darkButton:hover {
+    background-color: #0091bd !important;
+}
+
+
+.fileList {
+    margin-top: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+    text-align: start !important;
+    color: #252525;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.fileList li {
+    margin-bottom: 0.3rem;
+
+}
+
+.dark .uploadZone {
+    background-color: #1a1a1a;
+    border-color: #333;
+    color: #ccc;
+}
+
+.dark .fileList li {
+    color: #eee;
+}
+
+.eyeToggle {
+    all: unset;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+    margin: 0.5rem;
+    color: #E7433C;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.eyeToggle.active {
+    background-color: transparent;
+    color: #00B3E6;
+}
+
+@media (min-width: 1200px) {
+    .uploadZone {
+        height: 100% !important;
+        justify-content: center;
+        padding: 1.5rem 1rem;
+        flex-grow: 1;
+
+    }
+}
