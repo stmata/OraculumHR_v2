@@ -59,7 +59,7 @@ jobs:
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'app-oraculumhr-frontend-api-npd-01'
+          app-name: 'app-oraculumhr-frontend-api-npd-02'
           slot-name: 'Production'
           package: release.zip
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C9A28AF8EEA046BCB04471682627E4BD }}
