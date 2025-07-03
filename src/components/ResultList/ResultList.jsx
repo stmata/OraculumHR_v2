@@ -175,13 +175,16 @@ const ResultList = () => {
             )
             : true;
         const matchesCountry = hasCountry
-  ? normalizeCountry(
-      item.nationality || item.code_pays || item.issuing_country
-    ) === normalizeCountry(selectedCountry)
-  : true;
+            ? normalizeCountry(
+                item.nationality || item.code_pays || item.issuing_country
+            ) === normalizeCountry(selectedCountry)
+            : true;
 
         return matchesSearch && matchesCountry;
     });
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [searchTerm, selectedCountry]);
 
     const totalPages = Math.ceil(filteredData.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;

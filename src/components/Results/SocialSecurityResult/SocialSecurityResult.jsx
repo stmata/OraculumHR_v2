@@ -140,6 +140,23 @@ const SocialSecurityResult = ({ data }) => {
     };
 
     if (docType !== "social_security") return null;
+    const isFieldMissing = () => {
+        const source = editMode ? formData : data;
+        const fieldsToCheck = [
+            source.fullname,
+            source.social_security_number,
+            source.issuing_country,
+            source.issuing_date,
+            source.expiration_date,
+        ];
+        return fieldsToCheck.some((val) => {
+            if (!val) return true;
+            const raw = val.toString().trim().toLowerCase();
+            return raw === "" || raw === "not provided" || raw === "double check" || raw === "non fourni";
+        });
+    };
+
+    const hasWarning = isFieldMissing();
 
     return (
         <div className={styles.resultWrapper}>
@@ -157,7 +174,12 @@ const SocialSecurityResult = ({ data }) => {
                         <div className={styles.toastText}>{t.manuallyFieldsWarning}</div>
                     </div>
                 )}
-
+                {hasWarning && (
+                    <div className={styles.customToastWarning}>
+                        <div className={styles.toastIcon}>⚠️</div>
+                        <div className={styles.toastText}>{t.incompleteFieldsWarning}</div>
+                    </div>
+                )}
                 <div className={styles.contentRow}>
                     <div className={styles.left}>
                         <div className={styles.flag}>{countryInfo?.flag || "🏳️"}</div>
