@@ -15,6 +15,8 @@ const Login = () => {
         "maroua.bouain@skema.edu",
         "samira.moosavi@skema.edu",
         "steve.ataky@skema.edu",
+        "martin.ducrocq@skema.edu",
+        "pauline.ramon@skema.edu",
         "cheikh.diokhane@skema.edu",
         "ouarda.ramdani@skema.edu",
         "latifa.idizi@skema.edu",
